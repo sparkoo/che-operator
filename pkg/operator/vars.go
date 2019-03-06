@@ -68,7 +68,9 @@ var (
 	keycloakRealm            = util.GetEnv("CHE_KEYCLOAK_REALM", cheFlavor)
 	keycloakClientId         = util.GetEnv("CHE_KEYCLOAK_CLIENT__ID", cheFlavor+"-public")
 
-	cheImage = util.GetEnv("CHE_IMAGE", "eclipse/che-server:latest")
+	cheImage      = util.GetEnv("CHE_IMAGE", "eclipse/che-server:latest")
+	postgresImage = util.GetEnv("POSTGRES_IMAGE", "registry.access.redhat.com/rhscl/postgresql-96-rhel7:1-25")
+	keycloakImage = util.GetEnv("KEYCLOAK_IMAGE", "registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2-8")
 
 	postgresLabels = map[string]string{"component": "postgres", "app": cheFlavor}
 	keycloakLabels = map[string]string{"component": "keycloak", "app": cheFlavor}

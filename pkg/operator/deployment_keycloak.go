@@ -27,7 +27,6 @@ import (
 
 var (
 	keycloakName               = "keycloak"
-	keycloakImage              = "registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2-8"
 	trustpass                  = util.GeneratePasswd(12)
 	addCertToTrustStoreCommand = "keytool -importcert -alias HOSTDOMAIN" +
 			" -keystore /opt/eap/bin/openshift.jks" +

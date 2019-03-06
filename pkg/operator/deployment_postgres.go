@@ -57,7 +57,7 @@ func newPostgresDeployment() *appsv1.Deployment {
 					Containers: []corev1.Container{
 						{
 							Name:            name,
-							Image:           "registry.access.redhat.com/rhscl/postgresql-96-rhel7:1-25",
+							Image:           postgresImage,
 							ImagePullPolicy: corev1.PullIfNotPresent,
 							Ports: []corev1.ContainerPort{
 								{
